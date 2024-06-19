@@ -1,11 +1,7 @@
 # ezmonev
 Script otomasi pengisian emonev UNY
 
-
-
-https://github.com/faridmd/ezmonev/assets/77087718/254aa435-f737-437f-8f21-5a82b7eda7ac
-
-
+https://github.com/faridmd/ezmonev/assets/77087718/0ae0acdc-77e1-4f3e-a339-13918e2864c3
 
 Cara penggunaan :
 
