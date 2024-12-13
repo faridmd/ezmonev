@@ -1,38 +1,70 @@
-function ezmonev(){
-    function radioLooping(name){
-        for(let i = 0; i<name.length;i++) if(radio=document.evaluate(`//input[@value="${name[i]}"]`,document,null,9,null).singleNodeValue) radio.checked = true;
+function ezmonev() {
+    function checkRadioByValue(nameList) {
+        nameList.forEach(name => {
+            const radio = document.evaluate(
+                `//input[@value="${name}"]`,
+                document,
+                null,
+                XPathResult.FIRST_ORDERED_NODE_TYPE,
+                null
+            ).singleNodeValue;
+            if (radio) radio.checked = true;
+        });
     }
-    //inisialisasi nilai default
+
+    function checkRadioByNameAndValue(name, value) {
+        const radio = document.evaluate(
+            `//input[@name="${name}" and @value="${value}"]`,
+            document,
+            null,
+            XPathResult.FIRST_ORDERED_NODE_TYPE,
+            null
+        ).singleNodeValue;
+        if (radio) radio.checked = true;
+    }
+
+    function getRandomSaran(saranArray) {
+        const randomIndex = Math.floor(Math.random() * saranArray.length);
+        return saranArray[randomIndex];
+    }
+
+    // init nilai default
     const aplikasi = ['Besmart UNY ', 'Google Classroom', 'Google Meet', 'Zoom'];
     const metode = ['Diskusi dan penugasan ', 'Mempelajari modul'];
     const perkuliahan = ['Tatap muka'];
-    const n = 30;
-    let nilai = prompt('Mau nilainya berapa? contoh: 5');
-    
-    //looping nilai
-    for(let i = 0; i <= n; i++ ) if(radio=document.evaluate(`//input[@name="nilai[${i}]" and @value="${nilai}"]`,document,null,9,null).singleNodeValue) radio.checked=true;
-    
-    //looping aplikasi
-    radioLooping(aplikasi)
-    
-    //looping metode yg diterapkan
-    radioLooping(metode)
-    
-    //looping bentuk perkuliahan
-    radioLooping(perkuliahan)
-    
-    //waktu khusus dihabiskan untuk belajar (default = Lebih banyak)
-    const waktuKhusus=document.evaluate(`//input[@value="Lebih banyak"]`,document,null,9,null).singleNodeValue;
-    waktuKhusus.checked = true;
-    
-    //push the rest
-    const saran = 'Semoga ilmunya bermanfaat';	
-    const waktuEfektif = 120;
+    const jumlahNilai = 30;
+    const nilai = prompt('Mau nilainya berapa? contoh: 5');
+
+    // list saran
+    const saranList = [
+        'Semoga ilmunya bermanfaat',
+        'Semoga ilmunya berguna bagi bangsa dan negara',
+        'Semoga menjadi ilmu yang berkah dan barokah amiin',
+        'Semoga ilmunya dapat diaplikasikan dalam kehidupan sehari-hari',
+        'Semoga sukses dengan ilmunya'
+    ];
+
+    // loop nilai
+    for (let i = 0; i <= jumlahNilai; i++) {
+        checkRadioByNameAndValue(`nilai[${i}]`, nilai);
+    }
+
+    // looping aplikasi, metode, dan bentuk perkuliahan
+    checkRadioByValue(aplikasi);
+    checkRadioByValue(metode);
+    checkRadioByValue(perkuliahan);
+
+    // waktu khusus dihabiskan untuk belajar (default = Lebih banyak)
+    checkRadioByValue(['Lebih banyak']);
+
+    // isi saran dan waktu efektif
     const textarea = document.querySelector('textarea');
-    const wEfektif = document.getElementsByName('nilai[19]')[0].value = 120;
-    textarea.value = saran;
-    wEfektif.value = waktuEfektif;
-    console.log('Sudah selesai!')
+    const waktuEfektifInput = document.getElementsByName('nilai[19]')[0];
+
+    if (textarea) textarea.value = getRandomSaran(saranList);
+    if (waktuEfektifInput) waktuEfektifInput.value = 120;
+
+    console.log('Sudah selesai!');
 }
 
 ezmonev();
