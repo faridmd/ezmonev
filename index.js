@@ -41,7 +41,22 @@ function ezmonev() {
         'Semoga ilmunya berguna bagi bangsa dan negara',
         'Semoga menjadi ilmu yang berkah dan barokah amiin',
         'Semoga ilmunya dapat diaplikasikan dalam kehidupan sehari-hari',
-        'Semoga sukses dengan ilmunya'
+        'Semoga sukses dengan ilmunya',
+        'Semoga ilmu yang didapat bisa menjadi bekal di masa depan',
+        'Semoga ilmu yang diperoleh bisa membantu dalam mencapai cita-cita',
+        'Semoga ilmu yang didapat bisa meningkatkan kualitas diri',
+        'Semoga ilmu yang diperoleh bisa bermanfaat bagi orang lain',
+        'Semoga ilmu yang didapat bisa membuka wawasan baru',
+        'Semoga ilmu yang diperoleh bisa menjadi inspirasi bagi orang lain',
+        'Semoga ilmu yang didapat bisa membantu dalam menyelesaikan masalah',
+        'Semoga ilmu yang diperoleh bisa menjadi modal untuk meraih kesuksesan',
+        'Semoga ilmu yang didapat bisa membawa perubahan positif',
+        'Semoga ilmu yang diperoleh bisa menjadi sumber kebahagiaan',
+        'Semoga ilmu yang didapat bisa meningkatkan kepercayaan diri',
+        'Semoga ilmu yang diperoleh bisa menjadi bekal untuk masa depan yang lebih baik',
+        'Semoga ilmu yang didapat bisa membantu dalam mencapai tujuan hidup',
+        'Semoga ilmu yang diperoleh bisa menjadi sumber kekuatan',
+        'Semoga ilmu yang didapat bisa membawa keberkahan'
     ];
 
     // loop nilai

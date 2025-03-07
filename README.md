@@ -1,4 +1,5 @@
 # ezmonev
+
 Script otomasi pengisian emonev UNY
 
 https://github.com/faridmd/ezmonev/assets/77087718/0ae0acdc-77e1-4f3e-a339-13918e2864c3
@@ -10,3 +11,5 @@ Cara penggunaan :
 3. Inspect Element/Tekan tombol F12
 4. Klik pada bagian console dan pastekan script index.js ke consolenya
 5. Klik enter dan secara otomatis emonev akan terisi dengan sendirinya
+
+**Catatan:** Kode ini hanya untuk tujuan edukasi. Penyalahgunaan kode ini bukan tanggung jawab saya.
